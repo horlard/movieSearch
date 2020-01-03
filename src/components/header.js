@@ -17,7 +17,7 @@ const styles= {
 const Header=()=>{
     return (
         <div style={styles.container}>
-            <p style={styles.p}>moviesSearch</p>
+            <p style={styles.p}>Movie Search</p>
         </div>
     )
 }
