@@ -10,6 +10,7 @@
     grid-row-gap: 60px;
     grid-column-gap: 20px;
     text-align: center;
+    position: relative;;
 }
 .photo {
     width: 100%;
@@ -30,5 +31,38 @@ i.icon {
     height: 100vh;
 }
 .detailContainer {
-    height: 100%
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+.image {
+    width: 20%;
+    height:50%
+}
+.photo {
+    width: 100%;
+}
+.details {
+    width: 35%;
+    height: 100%;
+}
+h2 {
+    width: 100%;
+}
+i.left {
+    position: fixed;
+    top: 2%;
+    left: 30px;
+    color: #fff;
+    font-size: 25px;
+}
+.moonLoader{
+    position: absolute;
+    left: 46%;
+    top: 12%;
+}
+.moonLoad {
+    position: absolute;
+    left: 47%;
+    top: 25%;
 }
