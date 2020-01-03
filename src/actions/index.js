@@ -1,4 +1,8 @@
+
+
 import OmdbApi from '../api/omdbApi';
+
+
 
 
 const key='80748dc0';
@@ -27,9 +31,12 @@ export const mainSearch=formValue=>async dispatch=>{
 }
 
 export const idSearch=id=>async dispatch=> {
-    const response=await OmdbApi.get('/',{i:id,apikey:key})
+    const response=await OmdbApi.get('/',{params:{
+        i:id,
+        apikey:key
+    }})
     dispatch({
         type:'INDIVIDUAL_SEARCH',
-        payload:response
+        payload:response.data
     })
 }
