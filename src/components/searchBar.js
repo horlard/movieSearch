@@ -47,6 +47,7 @@ class SearchBar extends React.Component {
 
     onInputChange=e=> {
         this.setState({searchTerm:e.target.value})
+        console.log(this.state.searchTerm)
     }
 
     onSearch=(e)=> {
@@ -58,7 +59,7 @@ class SearchBar extends React.Component {
     render() {
         return (
             <form style={Styles.div} onSubmit={this.onSearch}>
-                <input style={Styles.input} placeholder='Search movies...' onChange={this.onInputChange}/>
+                <input style={Styles.input} placeholder='Search movies...' onChange={this.onInputChange} value={this.state.searchTerm}/>
                 <i className="search icon" style={Styles.i} onClick={this.onSearch}></i>
             </form>
         )
