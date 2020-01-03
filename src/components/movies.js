@@ -2,6 +2,7 @@ import React from 'react';
 import Movie from './movie';
 import {connect} from 'react-redux';
 import {defaulSearch} from '../actions';
+import Spinner from './spinner';
 
 import '../movies.css';
 
@@ -13,6 +14,7 @@ const Movies=(props)=> {
 
                 
                 {
+                    props.searchResult.length===0 ? <Spinner className='moonLoader'/> :
                     props.searchResult.map((response,i)=> {
                         return (
                             <Movie movie={response} key={i}/>
