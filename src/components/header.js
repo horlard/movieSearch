@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const styles= {
-    container:{
+    div:{
         width:'100%',
         background:'#000'
     },
@@ -16,7 +16,7 @@ const styles= {
 }
 const Header=()=>{
     return (
-        <div style={styles.container}>
+        <div style={styles.div}>
             <p style={styles.p}>Movie Search</p>
         </div>
     )

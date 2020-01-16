@@ -3,19 +3,14 @@ import React from 'react'
 import {connect} from 'react-redux';
 import {mainSearch} from '../actions';
 
+import '../movies.css'
 
 
 
-const key='80748dc0';
+
+
 const Styles={
-    div: {
-        textAlign:'center',
-        width:'30%',
-        position:'relative',
-        marginTop:'5%',
-        left:'35%',
-        
-    },
+   
     input : {
         width : '100%',
         padding: '15px',
@@ -58,8 +53,8 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <form style={Styles.div} onSubmit={this.onSearch}>
-                <input style={Styles.input} placeholder='Search movies...' onChange={this.onInputChange} value={this.state.searchTerm}/>
+            <form style={Styles.div} onSubmit={this.onSearch} className='form-submit'>
+                <input style={Styles.input} placeholder='Search movies...' onChange={this.onInputChange} value={this.state.searchTerm} className='text'/>
                 <i className="search icon" style={Styles.i} onClick={this.onSearch}></i>
             </form>
         )
